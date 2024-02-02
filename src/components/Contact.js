@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div>
       <div className='container mt-2'>
-        <div className='row'><h1>Hii</h1>
+        <div className='row'>
           <div className='col'>
                 
                 <div class="card  border-0 shadow-lg p-3 mb-5 bg-body rounded" >
