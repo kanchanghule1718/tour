@@ -14,29 +14,38 @@ import International from './components/International';
 import Carporate from './components/carporate';
 import Customized from './components/Custamized';
 import Videos from './videos';
+import CardDetails from './components/Products/CardDetails';
+import IntCardDetails from './components/int_CardDetails';
+import CustamizedCardDetails from './components/CustamizedCardDetails';
+import InquiryForm from './components/InquiryForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const routes=createBrowserRouter([
-  {path:'/',
-element:<App/>,
-children:[
-  {index:true,element:<Carousal/>},
-  {path:'/home', element:<Carousal/>},
-  {path:'/aboutUs',element:<AboutUs/>},
-  {path:'/contact',element:<Contact/>},
-  {path:'/india',element:<CardList/>},
-  {path:'/international',element:<International/>},
-  {path:'/carporate',element:<Carporate/>},
-  {path:'/custam',element:<Customized/>},
-  {path:'/media',element:<Videos/>}
-]
-}
+const routes = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      { index: true, element: <Carousal /> },
+      { path: '/home', element: <Carousal /> },
+      { path: '/aboutUs', element: <AboutUs /> },
+      { path: '/contact', element: <Contact /> },
+      { path: '/india', element: <CardList /> },
+      { path: '/international', element: <International /> },
+      { path: '/carporate', element: <Carporate /> },
+      { path: '/custam', element: <Customized /> },
+      { path: '/media', element: <Videos /> },
+      { path: '/pets/:id', element: <CardDetails /> },
+      { path: '/products/:id', element: <IntCardDetails /> },
+      { path: '/tours/:id', element: <CustamizedCardDetails /> },
+      { path: '/form', element: <InquiryForm /> },
+    ]
+  }
 ])
 
 root.render(
   <>
- <RouterProvider router={routes}/>
+    <RouterProvider router={routes} />
   </>
 );
 
