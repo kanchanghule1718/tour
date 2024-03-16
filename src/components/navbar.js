@@ -8,6 +8,7 @@ export default function Navbar() {
   let conatct_num = useRef()
   const submitOTP = (event) => {
     console.log(conatct_num.current.value);
+    console.log(Math.floor(Math.random() * 10000));
     event.preventDefault()
   }
 

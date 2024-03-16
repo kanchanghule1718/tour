@@ -18,13 +18,16 @@ import CardDetails from './components/Products/CardDetails';
 import IntCardDetails from './components/int_CardDetails';
 import CustamizedCardDetails from './components/CustamizedCardDetails';
 import InquiryForm from './components/InquiryForm';
+import ErrorPage from './components/ErrorPage';
+import LikeContext from './context/LikeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const routes = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <LikeContext><App /></LikeContext>,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Carousal /> },
       { path: '/home', element: <Carousal /> },
